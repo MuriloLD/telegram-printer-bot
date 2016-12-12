@@ -105,3 +105,4 @@ function startBot () {
 
 module.exports.startBot = startBot;
 
+// Commit test
