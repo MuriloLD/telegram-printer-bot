@@ -5,7 +5,7 @@ const logger = require('./logger');
 const TelegramBot = require('node-telegram-bot-api');
 const {addContact, userIsAuthorized} = require('./db');
 
-const token = process.env['TELEGRAM_API_TOKEN'] || '288679368:AAH_8Ux0xFtbo1Vus-ZM24MtuaAA1k1kTQA';
+const token = process.env['TELEGRAM_API_TOKEN'];
 const bot = new TelegramBot(token, {polling: true});
 
 const menus = {
