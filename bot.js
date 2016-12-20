@@ -2,11 +2,17 @@
 
 const _ = require('lodash');
 const logger = require('./logger');
-const TelegramBot = require('node-telegram-bot-api');
+const Telegram = require('telegram-node-bot');
+const TelegramBaseController = Telegram.TelegramBaseController;
+const TextCommand = Telegram.TextCommand;
 const {addContact, userIsAuthorized} = require('./db');
 
-const token = process.env['TELEGRAM_API_TOKEN'];
-const bot = new TelegramBot(token, {polling: true});
+// Token:
+const token = process.env['TELEGRAM_API_TOKEN'] || '302698817:AAHv9l81PZ-C5yj9yJflI30T8Q4Y2vGc33o';
+console.log(token) 
+
+
+const bot = new Telegram.Telegram('token');
 
 const menus = {
   selection: [
@@ -104,5 +110,3 @@ function startBot () {
 }
 
 module.exports.startBot = startBot;
-
-// Commit test 2

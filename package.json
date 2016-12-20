@@ -12,8 +12,9 @@
   "dependencies": {
     "lodash": "^4.16.2",
     "node-telegram-bot-api": "^0.23.3",
-    "sequelize": "^3.24.3",
+    "sequelize": "^3.27.0",
     "sqlite3": "^3.1.4",
+    "telegram-node-bot": "^4.0.5",
     "winston": "^2.3.0"
   }
 }
